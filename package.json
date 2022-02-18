@@ -1,0 +1,30 @@
+{
+  "name": "auto-functions",
+  "version": "1.0.0",
+  "description": "A list of automation scripts to simply day to day tasks",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "dotenv": "^16.0.0",
+    "puppeteer": "^13.3.2"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "prestart": "rimraf data && mkdir data",
+    "start": "npm run get-all-cities-in-us",
+    "get-all-cities-in-us": "node functions/get-all-cities-in-us.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npranto/auto-functions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npranto/auto-functions/issues"
+  },
+  "homepage": "https://github.com/npranto/auto-functions#readme"
+}
