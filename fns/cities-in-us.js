@@ -14,15 +14,15 @@ const writeToFile = (path, content) => {
 };
 
 (async () => {
-  console.log("Starting get-all-cities-is-us.js...");
+  console.log("Starting cities-in-us.js...");
   try {
     // launch browser + setup page
     console.log("> Launching browser and creating a new page");
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    console.log(`> Opening page - "${process.env.GET_ALL_CITIES_IN_US_URL}"`);
-    await page.goto(process.env.GET_ALL_CITIES_IN_US_URL);
+    console.log(`> Opening page - "${process.env.CITIES_IN_US_URL}"`);
+    await page.goto(process.env.CITIES_IN_US_URL);
 
     // setup DOM for page query
     console.log("> Setting up DOM to query target page");
@@ -59,14 +59,14 @@ const writeToFile = (path, content) => {
         __dirname,
         "..",
         "data",
-        "get-all-cities-is-us.json"
+        "cities-in-us.json"
       )}`
     );
     writeToFile(
-      path.join(__dirname, "..", "data", "get-all-cities-is-us.json"),
+      path.join(__dirname, "..", "data", "cities-in-us.json"),
       JSON.stringify(citiesInfo, null, 2)
     );
-    console.log("Exiting get-all-cities-is-us.js");
+    console.log("Exiting cities-in-us.js");
 
     await browser.close();
   } catch (error) {

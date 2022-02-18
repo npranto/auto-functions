@@ -14,8 +14,8 @@
   },
   "scripts": {
     "prestart": "rimraf data && mkdir data",
-    "start": "npm run get-all-cities-in-us",
-    "get-all-cities-in-us": "node fns/get-all-cities-in-us.js"
+    "start": "npm run cities-in-us",
+    "cities-in-us": "node fns/cities-in-us.js"
   },
   "repository": {
     "type": "git",
