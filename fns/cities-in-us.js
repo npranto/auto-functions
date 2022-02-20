@@ -1,17 +1,9 @@
 const puppeteer = require("puppeteer");
 const cheerio = require("cheerio");
-const fs = require("fs");
 const path = require("path");
+const writeToFile = require("../utils/writeToFile.js");
 
 require("dotenv").config();
-
-const writeToFile = (path, content) => {
-  try {
-    fs.writeFileSync(path, content);
-  } catch (error) {
-    throw error;
-  }
-};
 
 (async () => {
   console.log("Starting cities-in-us.js...");

@@ -15,7 +15,9 @@
   "scripts": {
     "prestart": "rimraf data && mkdir data",
     "start": "npm run cities-in-us",
-    "cities-in-us": "node fns/cities-in-us.js"
+    "cities-in-us": "node fns/cities-in-us.js",
+    "pt-list-all-countries": "node fns/prayer-times/list-all-countries.js",
+    "pt-list-all-cities-by-country": "node fns/prayer-times/list-all-cities-by-country.js"
   },
   "repository": {
     "type": "git",
